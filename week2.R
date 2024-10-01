@@ -12,3 +12,79 @@ Drugs
 plot(density(x = Drugs))
 hist(Drugs)
 
+min(Drugs)
+
+quantile(Drugs,probs = 0.25)
+
+median(Drugs)
+
+quantile(Drugs,probs = 0.75)
+
+max(Drugs)
+
+mean(Drugs)
+
+sum(Drugs)/length(Drugs)
+
+var(Drugs)
+
+sum((Drugs-mean(Drugs))^2)/(length(Drugs)-1)
+
+###################################################
+library(foreign)
+
+summary(Drugs)
+
+data.frame(Drugs)
+data()
+
+########## ACTIVITY #################
+
+a<-c(1,2,3,4,5)
+
+b<-c(-2,-4,6,7,6)
+
+c <- c(2, 3, 1, 6, -1)
+
+mydata <- data.frame(a,b,c)
+
+nrow(mydata)
+
+ncol(mydata)
+
+str(mydata)
+
+head(mydata)
+
+#creating a new variable
+mydata$atimesb <- mydata$a*mydata$b
+str(mydata)
+
+# extraction using subset function
+subset(mydata,b==6)
+
+## Summarizing data
+
+drugclass<-c("A","C","C","C","A","A","A","B","A","B","B","B","B","A","A","A","B",
+             "A","A","A","C","A","B","B","C","A","C","A","C","A","B","C","C","B",
+             "B","A","C","B","A","B","B","A","A","C","B","B","A","B","C","C","B",
+             "A","C","B","C","A","B","C","C","C","A","A","A","C","B","A","A","B",
+             "C","A","B","A","A","B","C","C","A","A","C","C","A","B","C","C")
+
+
+
+
+
+##Categorizing quantitative data
+drugcost <- Drugs
+
+drugcostcat <- cut(drugcost, # Data to be categorized
+          breaks = c(0,50,100,200,max(drugcost)), # Breaks for the categories
+          labels = c('Low','Medium','High','Very High')) # Category name
+
+D <- data.frame(drugcost,drugclass,drugcostcat)
+
+
+
+
+
