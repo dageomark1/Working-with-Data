@@ -38,6 +38,10 @@ ggplot(iris,aes(x = Sepal.Length,y = Sepal.Width,colour = Species))+
   facet_grid(.~Species) +
   scale_colour_manual(values=wes_palette(n=3, name="GrandBudapest1"))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
 =======
 
 >>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
@@ -80,7 +84,11 @@ tbl_summary(mw[-1],by = gender ) |>
 library(ggplot2)
 library(wesanderson)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ggplot(mw,aes(x = steps,y = bmi,colour = gender))+
+=======
+ggplot(mw,aes(x = steps,y = bmi))+
+>>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
 =======
 ggplot(mw,aes(x = steps,y = bmi))+
 >>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
@@ -134,7 +142,11 @@ anim <- read_csv('Animals.csv') %>%
   mutate(Species=fct_recode(Species,Ostrich='a', Deer='b', Bear= 'c',
                             Giant_tortoise= 'd')) %>% #Rename the levels of "Species"
 <<<<<<< HEAD
+<<<<<<< HEAD
   mutate(MBI=Weight/Height^2)  # create a new variable called BMI
+=======
+  mutate(anim,MBI=Weight/Height^2)  # create a new variable called BMI
+>>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
 =======
   mutate(anim,MBI=Weight/Height^2)  # create a new variable called BMI
 >>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
@@ -145,8 +157,12 @@ anim <- read_csv('Animals.csv') %>%
 head(anim)
 ggplot(anim,aes(x = Height,y = Weight)) +
 <<<<<<< HEAD
+<<<<<<< HEAD
   geom_point() +
   theme_bw()
+=======
+  geom_point()
+>>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
 =======
   geom_point()
 >>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
@@ -155,6 +171,7 @@ ggplot(anim,aes(x = Height,y = Weight)) +
 ggplot(anim,aes(x = Height,y = Weight)) +
   geom_point() +
   facet_grid(.~Species) +
+<<<<<<< HEAD
 <<<<<<< HEAD
   scale_colour_manual(values=wes_palette(n=3, name="Royal1")) +
   theme_bw()
@@ -178,6 +195,9 @@ ggplot(anim,aes(x = Weight)) +
 
 ####################################################################
 ####################################################################
+=======
+  scale_colour_manual(values=wes_palette(n=3, name="Royal1"))
+>>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
 =======
   scale_colour_manual(values=wes_palette(n=3, name="Royal1"))
 >>>>>>> 40a6c8e8ae4a5a5b2d5d779999a4d9b67b7755fb
