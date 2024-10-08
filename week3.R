@@ -12,7 +12,6 @@ ggplot(data = mtcars,aes(factor(cyl))) + #ggplot with a desired data
   labs(x = 'Number of cylinders', y = 'Frequency') #Axes labels
 
 
-
 # Pie chart of cars by number of cylinders using ggplot
 
 ggplot(mtcars,aes(factor(1), fill = factor(cyl))) +
